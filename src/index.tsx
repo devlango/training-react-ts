@@ -1,13 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import FunctionalWelcome from './FunctionalWelcome';
-import ClassWelcome from './ClassWelcome';
 
-const element: JSX.Element = (
-    <div>
-        <FunctionalWelcome name='Grzegorz' />
-        <ClassWelcome name='Prychowiak' />
-    </div>
-);
+function tick() {
+    const element: JSX.Element = (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    );
+  }
   
-ReactDOM.render(element, document.getElementById('root'));
+  setInterval(tick, 1000);
