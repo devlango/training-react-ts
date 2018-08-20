@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint:all",
+    "tslint-react"
+  ],
+  "rules": {
+    "jsx-self-close": true,
+    "quotemark": [ true, "single", "avoid-escape" ],
+    "variable-name": true,
+    "max-line-length": [ true, 200 ],
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": [true, "dev"],
+  }
+}

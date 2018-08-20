@@ -1,0 +1,51 @@
+{
+  "name": "devlnago.training-react-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "devlango",
+  "license": "MIT",
+  "scripts": {
+    "debug": "ts-node tools/debugServer.ts",
+    "build:debug": "npm-run-all -p pack-src:dev copy-html",
+    "pack-app:debug": "webpack --config webpack.config.debug.ts",
+    "copy-html": "copyfiles \"src/index.html\" dist -f",
+    "compile": "npm-run-all -p compile:src lint",
+    "compile:src": "tsc --noEmit",
+    "lint": "npm-run-all -p lint:tsx lint:ts",
+    "lint:tsx": "tslint \"src/**/*.tsx\" --force",
+    "lint:ts": "tslint \"src/**/*.ts\" --force"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/open": "^0.0.29",
+    "@types/react": "^16.4.11",
+    "@types/react-dom": "^16.0.7",
+    "@types/webpack": "^4.4.10",
+    "@types/webpack-dev-server": "^2.9.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "copyfiles": "^2.0.0",
+    "css-loader": "^1.0.0",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.16.3",
+    "npm-run-all": "^4.1.3",
+    "open": "^0.0.5",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "ts-loader": "^4.5.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-hot-middleware": "^2.22.3"
+  }
+}
